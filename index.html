@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Shape Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white d-flex flex-column justify-content-center align-items-center py-3 m-0">
+
+    <div class="container text-center px-2">
+        
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mb-3 mx-auto" style="width: 100%; max-width: 800px; padding: 0 4px;">
+            <div class="badge bg-secondary p-2 fs-6">
+                NUMBER OF CURRENT SHAPES: <span id="shape-count">0</span>
+            </div>
+            <div class="badge bg-secondary p-2 fs-6">
+                SURFACE AREA: <span id="shape-area">0 px²</span>
+            </div>
+        </div>
+
+        <div class="border border-light rounded overflow-hidden bg-black d-inline-block position-relative mx-auto my-1">
+            <canvas id="gameCanvas" width="800" height="600" class="d-block"></canvas>
+        </div>
+
+        <div class="row mt-3 justify-content-center g-3 align-items-center">
+            <div class="col-12 col-md-auto pe-3">
+                <div class="shape-rate-control justify-content-center">
+                    <div class="shape-rate-label">Number of shapes per second:</div>
+                    <div class="shape-rate-box">
+                        <button id="btn-fps-minus" class="shape-rate-btn" type="button" aria-label="Decrease shapes per second">-</button>
+                        <span id="val-fps" class="shape-rate-value">1</span>
+                        <button id="btn-fps-plus" class="shape-rate-btn" type="button" aria-label="Increase shapes per second">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-auto ps-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <span class="small">Gravity:</span>
+                    <button id="btn-grav-minus" class="btn btn-sm btn-outline-light" aria-label="Decrease gravity">-</button>
+                    <span id="val-grav" class="fw-bold">0.3</span>
+                    <button id="btn-grav-plus" class="btn btn-sm btn-outline-light" aria-label="Increase gravity">+</button>
+                </div>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
